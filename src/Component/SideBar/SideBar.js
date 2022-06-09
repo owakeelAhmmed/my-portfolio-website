@@ -27,9 +27,9 @@ function SideBar() {
 
 {/* ul & li start */}
               
-              <li className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='/'>Home</Link></li>
-              <li className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='contactme'>Contact Me</Link></li>
-              <li className='btn btn-outline btn-secondary text-accent  '><Link to='projectcard'>Project</Link></li>
+              <button className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='/'>Home</Link></button>
+              <button className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='contactme'>Contact Me</Link></button>
+              <button className='btn btn-outline btn-secondary text-accent  '><Link to='projectcard'>Project</Link></button>
             </ul>
           
           </div>

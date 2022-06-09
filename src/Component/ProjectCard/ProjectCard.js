@@ -12,7 +12,7 @@ function ProjectCard() {
   return (
     <section className='px-8 '>
        <div className='flex justify-center '>
-       <div class="card w-72 bg-neutral mr-3 shadow-xl">
+       <div class="card w-64 bg-neutral mr-3 shadow-xl">
               <figure><img className='rounded-md w-64 ' src={img1} alt="Shoes" /></figure>
               <div class="card-body">
                 <h2 class="card-title text-primary">
@@ -30,7 +30,7 @@ function ProjectCard() {
               </div>
             </div>
             {/* secend card */}
-            <div class="card bg-neutral w-72 mr-3 shadow-xl">
+            <div class="card bg-neutral w-64 mr-3 shadow-xl">
               <figure><img src={img2} alt="Shoes" /></figure>
               <div class="card-body">
                 <h2 class="card-title">
@@ -47,7 +47,7 @@ function ProjectCard() {
               </div>
             </div>
             {/* third card */}
-            <div class="card w-72 bg-neutral mr-3   shadow-xl">
+            <div class="card w-64 bg-neutral mr-3   shadow-xl">
               <figure><img src={img3} alt="Shoes" /></figure>
               <div class="card-body">
                 <h2 class="card-title">

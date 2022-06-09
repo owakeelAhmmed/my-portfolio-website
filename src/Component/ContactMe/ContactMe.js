@@ -1,5 +1,6 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 function ContactMe() {
 
@@ -10,10 +11,13 @@ function ContactMe() {
     
         emailjs.sendForm('service_z0hyfxm', 'template_8o9ezlm', e.target, 'qRRBJU9ln1TKvORfF')
           .then((result) => {
-              console.log(result.text);
+              if(result.text){
+                toast.success("Email Send Successfully")
+              };
           }, (error) => {
               console.log(error.text);
           });
+          
           e.target.reset()
       };
 
@@ -24,25 +28,26 @@ function ContactMe() {
 
   return (
     <section>
+        <Toaster />
         <div class="hero min-h-screen p-4">
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <div class="text-center lg:text-left">
                 <h1 class="text-5xl font-bold"></h1>
-                <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                
                 </div>
                 <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-neutral">
                 <div class="card-body">
                     <form onSubmit={sendEmail}>
                             <div class="form-control">
-                                <input type="text" placeholder="Enter Name" class="input input-bordered" />
+                                <input type="text" placeholder="Enter Name" name="user_name" class="input input-bordered mb-3 bg-neutral" />
                             </div>
 
                             <div class="form-control">
-                                <input type="text" placeholder="Email" class="input input-bordered" />
+                                <input type="email" placeholder="Email" name="user_email" class="input input-bordered mb-3 bg-neutral" />
                             </div>
-                            <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+                            <textarea class="textarea textarea-bordered bg-neutral justify-center " placeholder="Bio"></textarea>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">submit</button>
+                                <button class="btn btn-secondary">submit</button>
                             </div>
                     </form>
                     
