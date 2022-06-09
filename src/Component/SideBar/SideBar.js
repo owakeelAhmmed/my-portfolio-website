@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 
 function SideBar() {
   return (
-    <section>
+    <section className='px-8'>
         <div class="drawer drawer-mobile ">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
           <div class="drawer-content flex flex-col items-center justify-center">
@@ -11,7 +11,7 @@ function SideBar() {
             <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
           
           </div> 
-          <div class="drawer-side bg-accent">
+          <div class="drawer-side bg-accent  rounded-full">
             <label for="my-drawer-2" class="drawer-overlay"></label>
             
               
@@ -24,7 +24,9 @@ function SideBar() {
               </div>
 
 {/* ul & li start */}
-              <button className='btn btn-outline btn-secondary text-accent  '><Link to='/'>Home</Link></button>
+              
+              <li className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='/'>Home</Link></li>
+              <li className='btn btn-outline btn-secondary text-accent  '><Link to='contactme'>Contact Me</Link></li>
               
             </ul>
           

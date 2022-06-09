@@ -8,7 +8,7 @@ function Home() {
       <div class="hero min-h-screen">
         <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="avatar ">
-          <div class="w-60 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <div class="w-72 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img src="https://api.lorem.space/image/face?hash=3174" />
           </div>
         </div>
