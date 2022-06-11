@@ -1,67 +1,42 @@
-import React from 'react';
-import img1 from '../Images/Assignment12.png';
-import img2 from '../Images/Assignment11.png';
-import img3 from '../Images/Assignment10.png';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
 function ProjectCard() {
+      const [projects , setprojects] = useState([]);
+        console.log(projects)
 
+      useEffect(() =>{
+        fetch('data.json')
+        .then(Response => Response.json())
+        .then(data => setprojects(data))
+      },[])
+   
 
 
   return (
-    <section className='px-8 '>
-       <div className='flex justify-center '>
-       <div class="card w-64 bg-neutral mr-3 shadow-xl">
-              <figure><img className='rounded-md w-64 ' src={img1} alt="Shoes" /></figure>
-              <div class="card-body">
-                <h2 class="card-title text-primary">
-                SUPER-GEAR
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <div class="card-actions justify-end mt-3">
-                  <div class="badge badge-outline">MongoDB</div> 
-                  <div class="badge badge-outline">React Query</div> 
-                  <div class="badge badge-outline">Firebase authentication</div>
-                  <div class="badge badge-outline">JWT</div>
-                  <div class="badge badge-outline">Node.js</div> 
-                  
-                </div>
-              </div>
-            </div>
-            {/* secend card */}
-            <div class="card bg-neutral w-64 mr-3 shadow-xl">
-              <figure><img src={img2} alt="Shoes" /></figure>
-              <div class="card-body">
-                <h2 class="card-title">
-                    medi-house
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Firebase authentication</div>
-                  <div class="badge badge-outline">MongoDb</div> 
-                  <div class="badge badge-outline">Node.js</div>
-                  <div class="badge badge-outline">React router</div>
-                  <div class="badge badge-outline">Bootstap</div> 
-                </div>
-              </div>
-            </div>
-            {/* third card */}
-            <div class="card w-64 bg-neutral mr-3   shadow-xl">
-              <figure><img src={img3} alt="Shoes" /></figure>
-              <div class="card-body">
-                <h2 class="card-title">
-                fit-for-the-future
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">React Router</div> 
-                  <div class="badge badge-outline">React Hooks</div>
-                  <div class="badge badge-outline">Firebase authentication</div>
-                  <div class="badge badge-outline">Bootstrap</div>
-                </div>
-              </div>
-            </div>
+    <section className='mt-40 px-12'>
+       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
+         {
+           projects.map(p => 
+           <div key={p.id} class="card   mr-3 shadow-xl">
+           <img style={{height:"350px"}} src={p.image} alt="Shoes" />
+             <div class="card-body">
+               <h2 class="card-title text-gray-500">
+               {p.name}
+                 <div class="badge badge-secondary">NEW</div>
+               </h2>
+               <div class="card-actions justify-end mt-3">
+               <Link to={`/projectinfo/${p.id}`}><button class="btn btn-outline btn-secondary btn-xs">Live</button></Link>
+               <Link to={`/projectinfo/${p.id}`}><button class="btn btn-outline btn-secondary btn-xs">Code</button></Link>
+               <Link to={`/projectinfo/${p.id}`}><button class="btn btn-outline btn-secondary btn-xs">See More</button></Link>
+                
+               </div>
+             </div>
+           </div>)
+         }
+       
        </div>
         
 
@@ -70,3 +45,11 @@ function ProjectCard() {
 }
 
 export default ProjectCard
+
+
+
+ {/* <div class="badge badge-outline">MongoDB</div> 
+                  <div class="badge badge-outline">React Query</div> 
+                  <div class="badge badge-outline">Firebase authentication</div>
+                  <div class="badge badge-outline">JWT</div>
+                  <div class="badge badge-outline">Node.js</div>  */}

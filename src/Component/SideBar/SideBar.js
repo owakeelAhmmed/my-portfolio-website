@@ -26,10 +26,12 @@ function SideBar() {
               
 
 {/* ul & li start */}
+                <Link to='/'><button className='btn btn-outline btn-secondary text-accent mb-5 py-2 '>Home</button></Link>
+                <Link to='projectcard'><button className='btn btn-outline btn-secondary text-accent mb-5 '>Project</button></Link>
+                <Link to='blog'><button className='btn btn-outline btn-secondary text-accent mb-5 '>Blogs</button></Link>
+                <Link to='aboutme'><button className='btn btn-outline btn-secondary text-accent mb-5 '>About Me</button></Link>
+                <Link to='contactme'><button className='btn btn-outline btn-secondary text-accent  '>Contact Me</button></Link>
               
-              <button className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='/'>Home</Link></button>
-              <button className='btn btn-outline btn-secondary text-accent mb-5 '><Link to='contactme'>Contact Me</Link></button>
-              <button className='btn btn-outline btn-secondary text-accent  '><Link to='projectcard'>Project</Link></button>
             </ul>
           
           </div>

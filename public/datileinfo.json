@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "SUPER-GEAR",
+      "image1": "https://ibb.co/k5BW2ry",
+      "image2": "https://ibb.co/k5BW2ry",
+      "image3": "https://ibb.co/k5BW2ry",
+      "description": "Personal trainers assess their customers' bodily strengths and weaknesses and create customized workout plans."
+    },
+    {
+      "id": 2,
+      "name": "medi-house",
+      "image1": "https://ibb.co/k5BW2ry",
+      "image2": "https://ibb.co/k5BW2ry",
+      "image3": "https://ibb.co/k5BW2ry",
+      "description": "Personal trainers assess their customers' bodily strengths and weaknesses and create customized workout plans."
+    },
+    {
+      "id": 3,
+      "name": "fit-for-the-future",
+      "image1": "https://ibb.co/k5BW2ry",
+      "image2": "https://ibb.co/k5BW2ry",
+      "image3": "https://ibb.co/k5BW2ry",
+      "description": "Personal trainers assess their customers' bodily strengths and weaknesses and create customized workout plans."
+    }
+  ]
